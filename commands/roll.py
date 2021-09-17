@@ -6,7 +6,7 @@ component = tanjun.Component()
 
 
 @component.with_slash_command
-@tanjun.with_int_slash_option("number", "The number of dice to roll (max: 25).")
+@tanjun.with_int_slash_option("number", "The number of dice to roll (max: 100).")
 @tanjun.as_slash_command("roll", "Roll one or more dice.")
 async def command_dice(ctx: tanjun.abc.Context, number: int) -> None:
     if number > 100:
