@@ -4,12 +4,16 @@ import logging
 import os
 import uvloop
 
+from dotenv import load_dotenv
+
 import hikari
 import tanjun
 
 GUILD_ID = 358248587026497537
 
-bot = hikari.GatewayBot(token='NDYzOTAxMDQ0MDg3NDU1NzY3.Wzw3gw.DxK0sSfW_k4ziMb1iB-Bz4x1kvY', logs="DEBUG", intents=hikari.Intents.ALL)
+load_dotenv()
+
+bot = hikari.GatewayBot(token=os.getenv("DISCORD", None), logs="DEBUG", intents=hikari.Intents.ALL)
 # bot.remove_command("help")
 
 client = tanjun.Client.from_gateway_bot(bot, set_global_commands=GUILD_ID)
