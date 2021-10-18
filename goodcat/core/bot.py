@@ -17,9 +17,12 @@ load_dotenv()
 
 logger = logging.getLogger("goodcat.main")
 
+
 class Bot(hikari.GatewayBot):
     def __init__(self) -> None:
-        super().__init__(token=os.environ.get("DISCORD"), logs="DEBUG", intents=hikari.Intents.ALL)
+        super().__init__(
+            token=os.environ.get("DISCORD"), logs="DEBUG", intents=hikari.Intents.ALL
+        )
 
     def create_client(self) -> None:
         self.client = Client.from_gateway_bot(self, set_global_commands=GUILD_ID)
@@ -48,4 +51,6 @@ class Bot(hikari.GatewayBot):
     async def on_stopping(self, event: hikari.StoppingEvent) -> None:
         await self.client.close()
         logger.info("Bot has been shut down.")
+
+
 # bot.remove_command("help")

@@ -6,6 +6,7 @@ import tanjun
 
 _ClientT = t.TypeVar("_ClientT", bound="Client")
 
+
 class Client(tanjun.Client):
     __slots__ = tanjun.Client.__slots__ + ("scheduler",)
 
