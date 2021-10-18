@@ -1,1 +1,1 @@
-worker: python -O main.py
+worker: python -OO -m goodcat
