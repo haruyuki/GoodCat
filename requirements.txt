@@ -1,4 +1,4 @@
 hikari == 2.0.0.dev103
-hikari-tanjun == 2.0.0a3.post1
+hikari-tanjun == 2.1.2a1
 python-dotenv
 uvloop
