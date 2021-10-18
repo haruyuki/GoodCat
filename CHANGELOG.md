@@ -1,6 +1,24 @@
 # Changelog
 All updates and changes made to this bot will be documented here.
 
+- **Added** for new features.
+- **Changed** for changes in existing functionality.
+- **Deprecated** for soon-to-be removed features.
+- **Removed** for now removed features.
+- **Fixed** for any bug fixes.
+- **Security** in case of vulnerabilities.
+
+---
+
+## [0.1.0](8546c1ac3532c8c0eb1c819ae2fa9004c848e2ff) - 18/10/2021
+### Changed
+- Rewrite of code to match new folder structure
+### Fixed
+- Fixed bot starting twice as a result of new structure
+### Security
+- Updated Hikari to 2.0.0.dev103
+- Updated Tanjun to 2.1.2a1
+
 ## [0.0.4](460b2648762c8a8f35f094dc4d8f1fde5bdeebc1) - 17/09/2021
 ### Changed
 - Changed 'dice' command to be called 'roll'
