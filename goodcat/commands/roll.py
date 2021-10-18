@@ -2,6 +2,8 @@ import random
 
 import tanjun
 
+from goodcat.core.client import Client
+
 component = tanjun.Component()
 
 
@@ -15,12 +17,9 @@ async def command_dice(ctx: tanjun.abc.Context, number: int) -> None:
 
     rolls = [random.randint(1, 6) for i in range(number)]
 
-    await ctx.respond(
-        " + ".join(f"{r}" for r in rolls)
-        + f" = **{sum(rolls):,}**"
-    )
+    await ctx.respond(" + ".join(f"{r}" for r in rolls) + f" = **{sum(rolls):,}**")
 
 
 @tanjun.as_loader
-def load_component(client: tanjun.abc.Client) -> None:
+def load_component(client: Client) -> None:
     client.add_component(component.copy())
