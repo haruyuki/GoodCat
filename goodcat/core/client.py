@@ -4,6 +4,7 @@ from pathlib import Path
 import hikari
 import tanjun
 
+_ClientT = t.TypeVar("_ClientT", bound="Client")
 
 class Client(tanjun.Client):
     __slots__ = tanjun.Client.__slots__ + ("scheduler",)
@@ -11,7 +12,7 @@ class Client(tanjun.Client):
     def __init__(self, *args: t.Any, **kwargs: t.Any) -> None:
         super().__init__(*args, **kwargs)
 
-    def load_modules(self: tanjun.Client) -> tanjun.Client:
+    def load_modules(self: _ClientT) -> _ClientT:
         super().load_modules(*Path("./goodcat/commands").glob("*.py"))
         return self
 
