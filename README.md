@@ -1,7 +1,7 @@
 # GoodCat Discord Bot
 
-[![hikari](https://img.shields.io/badge/hikari-v2.0.0.dev103-de4f91.svg)](https://github.com/Rapptz/discord.py)
-[![hikari](https://img.shields.io/badge/tanjun-v2.1.2a1-blue.svg)](https://github.com/Rapptz/discord.py)
+[![hikari-py](https://img.shields.io/badge/hikari-v2.0.0.dev103-de4f91.svg)](https://github.com/hikari-py/hikari)
+[![tanjun](https://img.shields.io/badge/tanjun-v2.1.2a1-blue.svg)](https://github.com/FasterSpeeding/Tanjun)
 [![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![License](https://img.shields.io/github/license/haruyuki/GoodCat.svg)](https://github.com/haruyuki/GoodCat/blob/master/LICENSE)
